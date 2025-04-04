@@ -1,0 +1,140 @@
+/* General Body Style */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fc; /* Soft light gray background */
+    color: #495057; /* Dark gray text */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #343a40; /* Dark gray */
+    color: #fff;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.navbar h1 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #007bff; /* Primary blue */
+    color: #fff;
+}
+
+/* Main Container */
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+/* Card Styling */
+.card {
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card h2 {
+    font-size: 1.7rem;
+    color: #343a40;
+    margin-bottom: 1rem;
+}
+
+/* Alerts Table */
+.alerts {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.alerts th, .alerts td {
+    padding: 1rem;
+    border: 1px solid #dee2e6;
+    text-align: left;
+}
+
+.alerts th {
+    background-color: #f1f3f5; /* Lighter gray for headers */
+    color: #495057;
+}
+
+.alerts tr:nth-child(even) {
+    background-color: #f8f9fc;
+}
+
+.alerts tr:hover {
+    background-color: #e9ecef;
+}
+
+.alerts td {
+    color: #495057;
+}
+
+/* Activities Table */
+.activities table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.activities th, .activities td {
+    padding: 1rem;
+    border: 1px solid #dee2e6;
+    text-align: left;
+}
+
+.activities th {
+    background-color: #f1f3f5;
+    color: #495057;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40; /* Dark gray */
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar h1 {
+        font-size: 1.5rem;
+    }
+}

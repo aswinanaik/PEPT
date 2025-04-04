@@ -1,0 +1,84 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privilege Escalation Prevention</title>
+    
+    <!-- Google Font for a cleaner look -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Link to Static CSS (make sure your 'style.css' is correctly referenced) -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <h1>Privilege Escalation Prevention</h1>
+            <div class="nav-links">
+                <a href="#">Dashboard</a>
+                <a href="#">Settings</a>
+                <a href="#">Logout</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Alerts Table -->
+        <div class="card alerts">
+            <h2>Recent Alerts</h2>
+            <table class="alerts">
+                <tr>
+                    <th>Timestamp</th>
+                    <th>Message</th>
+                </tr>
+                {% for warning in warnings %}
+                <tr>
+                    <td>{{ warning.timestamp }}</td>
+                    <td>{{ warning.message }}</td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="2">No warnings available.</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+
+        <!-- User Activities Card -->
+        <div class="card activities">
+            <h2>User Activities</h2>
+            <table>
+                <tr>
+                    <th>User</th>
+                    <th>Action</th>
+                    <th>Timestamp</th>
+                </tr>
+                <tr>
+                    <td>admin</td>
+                    <td>Login</td>
+                    <td>2025-04-03 10:20:30</td>
+                </tr>
+                <tr>
+                    <td>user1</td>
+                    <td>Privilege Escalation Attempt</td>
+                    <td>2025-04-03 09:45:12</td>
+                </tr>
+                <tr>
+                    <td>admin</td>
+                    <td>System Reboot</td>
+                    <td>2025-04-03 08:30:00</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 Privilege Escalation Prevention System
+    </footer>
+
+</body>
+</html>

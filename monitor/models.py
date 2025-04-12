@@ -28,8 +28,8 @@ def send_warning_email(sender, instance, created, **kwargs):
         logger.debug("send_warning_email signal triggered.")  # Debug log to verify signal is triggered
         subject = "Privilege Escalation Attempt Detected"
         message = f"A new warning has been logged:\n\n{instance.message}\n\nTimestamp: {instance.timestamp}"
-        from_email = 'anandvaliyakalayil0727@gmail.com'  # Replace with your email address
-        recipient_list = ['ananthakrishnan272004@gmail.com']  # Replace with the recipient's email address
+        from_email = ''  # Replace with your email address
+        recipient_list = ['']  # Replace with the recipient's email address
         try:
             send_mail(subject, message, from_email, recipient_list, fail_silently=False)
             logger.debug("Email sent successfully.")

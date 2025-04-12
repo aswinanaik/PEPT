@@ -2,6 +2,7 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('dashboard/', views.dashboard, name='dashboard'),  # Add this line
+    path('login/', views.login_view, name='login'),
+    path('dashboard/', views.dashboard, name='dashboard'),
+    path('logout/', views.logout_view, name='logout'),  # Logout URL
 ]
-

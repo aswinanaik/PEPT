@@ -19,9 +19,8 @@
         <nav class="navbar">
             <h1>Privilege Escalation Prevention</h1>
             <div class="nav-links">
-                <a href="#">Dashboard</a>
-                <a href="#">Settings</a>
-                <a href="#">Logout</a>
+               
+                <a href="{% url 'logout' %}">Logout</a>
             </div>
         </nav>
     </header>
@@ -49,31 +48,7 @@
         </div>
 
         <!-- User Activities Card -->
-        <div class="card activities">
-            <h2>User Activities</h2>
-            <table>
-                <tr>
-                    <th>User</th>
-                    <th>Action</th>
-                    <th>Timestamp</th>
-                </tr>
-                <tr>
-                    <td>admin</td>
-                    <td>Login</td>
-                    <td>2025-04-03 10:20:30</td>
-                </tr>
-                <tr>
-                    <td>user1</td>
-                    <td>Privilege Escalation Attempt</td>
-                    <td>2025-04-03 09:45:12</td>
-                </tr>
-                <tr>
-                    <td>admin</td>
-                    <td>System Reboot</td>
-                    <td>2025-04-03 08:30:00</td>
-                </tr>
-            </table>
-        </div>
+        
     </div>
 
     <footer>

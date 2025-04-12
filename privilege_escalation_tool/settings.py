@@ -1,6 +1,8 @@
 from pathlib import Path
 import os
+import logging
 
+logging.basicConfig(level=logging.DEBUG)
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -107,3 +109,20 @@ STATICFILES_DIRS = [
 STATIC_ROOT = BASE_DIR / "staticfiles"  # Only needed in production, when running collectstatic
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+LOGIN_URL = '/ws/login/'
+
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'  # Use database-backed sessions
+SESSION_COOKIE_AGE = 3600  # Session expiry in seconds (1 hour)
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True  # Expire session when the browser is closed
+SESSION_COOKIE_SECURE = False  # Set to True in production with HTTPS
+
+# Email settings
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True 
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL=False
+EMAIL_HOST_USER = 'anandvaliyakalayil0727@gmail.com'  # Replace with your email address
+EMAIL_HOST_PASSWORD = 'tilu bofj rchg alkk'  # Replace with your email password
+

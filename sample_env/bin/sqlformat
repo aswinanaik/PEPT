@@ -1,4 +1,4 @@
-#!/home/aswinanaik/Downloads/proj/project/privilege_escalation_tool/my_env/bin/python3
+#!/home/ananthan/Desktop/PEPT/sample_env/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys

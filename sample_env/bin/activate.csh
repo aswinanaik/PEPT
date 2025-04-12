@@ -9,7 +9,7 @@ alias deactivate 'test $?_OLD_VIRTUAL_PATH != 0 && setenv PATH "$_OLD_VIRTUAL_PA
 # Unset irrelevant variables.
 deactivate nondestructive
 
-setenv VIRTUAL_ENV /home/aswinanaik/Downloads/proj/project/privilege_escalation_tool/my_env
+setenv VIRTUAL_ENV /home/ananthan/Desktop/PEPT/sample_env
 
 set _OLD_VIRTUAL_PATH="$PATH"
 setenv PATH "$VIRTUAL_ENV/"bin":$PATH"
@@ -18,8 +18,8 @@ setenv PATH "$VIRTUAL_ENV/"bin":$PATH"
 set _OLD_VIRTUAL_PROMPT="$prompt"
 
 if (! "$?VIRTUAL_ENV_DISABLE_PROMPT") then
-    set prompt = '(my_env) '"$prompt"
-    setenv VIRTUAL_ENV_PROMPT '(my_env) '
+    set prompt = '(sample_env) '"$prompt"
+    setenv VIRTUAL_ENV_PROMPT '(sample_env) '
 endif
 
 alias pydoc python -m pydoc

@@ -123,6 +123,6 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL=False
-EMAIL_HOST_USER = 'anandvaliyakalayil0727@gmail.com'  # Replace with your email address
-EMAIL_HOST_PASSWORD = 'tilu bofj rchg alkk'  # Replace with your email password
+EMAIL_HOST_USER = ''  # Replace with your email address
+EMAIL_HOST_PASSWORD = ''  # Replace with your email app password
 
